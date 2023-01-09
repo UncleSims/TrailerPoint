@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { 
+  createBrowserRouter,
+   Route, 
+   createRoutesFromElements,
+   RouterProvider
+  } from "react-router-dom";
+
+import Movies from "./components/Movies";
+import TvShows from "./components/TvShows";
+import Trending from "./components/Trending";
+import RootLayout from "./components/RootLayout";
+
+
+import ContainerContextProvider from "./components/ContainerContext";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<RootLayout />}>
+    <Route path="/" element={<Movies /> }/>
+    <Route path="TvShows" element={<TvShows /> }/>
+     <Route path="Trending" element={<Trending /> }/>
+  </Route>
+  )
+)
 
 function App() {
+ 
   return (
+  
+   <ContainerContextProvider>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <RouterProvider router={router}/>
+    </div>  
+    </ContainerContextProvider>
   );
 }
 
