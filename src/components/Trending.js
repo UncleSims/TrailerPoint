@@ -48,7 +48,7 @@ const Trending = () => {
                 </>
               )
             })}
-          {trailer ? console.log : <TrailerTrending trendTitle={trendTitle}/>}
+          {trailer ? "" : <TrailerTrending trendTitle={trendTitle}/>}
           <AiOutlineClose id={trailer ? "Nothing" : "Exit1" } className={toggle ? "DarkTheme" : "LightThemeClose" } fontSize={45} color={toggle ? "white" : "black"} cursor={"pointer"} onClick={() => setTrailer(true)}/>
         </div>
       </div>

@@ -51,7 +51,7 @@ const TvShows = () => {
           </fragment>
         )
       })}
-      {trailer ? console.log : <TrailerTvShows title={title}/>}
+      {trailer ? "" : <TrailerTvShows title={title}/>}
       <AiOutlineClose id={trailer ? "Nothing" : "Exit1" } className={toggle ? "DarkTheme" : "LightThemeClose" } fontSize={45} color={toggle ? "white" : "black"} cursor={"pointer"} onClick={() => setTrailer(true)}/>
     </div>
     </div>

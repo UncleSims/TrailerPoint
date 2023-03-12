@@ -16,17 +16,19 @@ function ContainerContextProvider(props){
          }
     
     const inputChange = (e) =>{
-        setInputValue(e.target.value)
+        setInputValue(e.target.value);
+    }
+    
+    const onClick = (e) => {
+        setInputValue("")
+       
+
     }
 
-    const MoviesTitle = (movie) => {
-        setMovieTitle(movie.title)
-        setTrailer(!trailer)
-      }
 
     const values = {toggle, inputValue, handleClick, inputChange, 
         trailer, setTrailer, AiFillPlayCircle, AiOutlineClose,
-        NoImage, images, movieTitle, setMovieTitle, MoviesTitle}
+        NoImage, images, movieTitle, setMovieTitle, onClick,}
         
     return(
         <ContainerContext.Provider value={values}>

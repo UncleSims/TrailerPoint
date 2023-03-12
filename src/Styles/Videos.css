@@ -53,8 +53,8 @@ body{
     display: none;
 }
 #smaller-Text{
-    width: 100%;
-    font-size: 11px;
+    width: 60%;
+    font-size: 8px;
     display: flex;
     justify-content: center;
 }
@@ -67,10 +67,7 @@ body{
     cursor: pointer;
 }
 #Exit1{
-    /* position: absolute;
-    margin-left: 680px;
-    margin-top: 67px;
-    z-index: 999; */
+ 
     position: fixed;
     margin-left: 50vw;
     margin-top: 2vh;

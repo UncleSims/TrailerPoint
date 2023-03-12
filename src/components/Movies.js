@@ -10,7 +10,7 @@ import TrailerMovies from '../trailers/TrailerMovies';
 
 const Movies = () => {
   const {toggle, inputValue, trailer, setTrailer, 
-    AiFillPlayCircle, AiOutlineClose, NoImage, images } = useContext(ContainerContext)
+    AiFillPlayCircle, AiOutlineClose, NoImage, images,} = useContext(ContainerContext)
   const input = inputValue
   const [moviesData, setMoviesData] = useState([])
   const [movieTitle, setMovieTitle] = useState("")
@@ -29,7 +29,7 @@ const Movies = () => {
     
     const results = data.data.results;
       setMoviesData(results);
-      console.log(results);
+      
     };
     
     useEffect(() => {
@@ -57,7 +57,7 @@ const Movies = () => {
                 </div>
               </>)  
             })}
-          {trailer ? console.log : <TrailerMovies movieTitle={movieTitle}/>}
+          {trailer ? "" : <TrailerMovies movieTitle={movieTitle}/>}
           <AiOutlineClose id={trailer ? "Nothing" : "Exit1" } className={toggle ? "DarkTheme" : "LightThemeClose"} fontSize={45} color={toggle ? "white" : "black"} cursor={"pointer"} onClick={() => setTrailer(true)}/>
         </div>
       </div>
