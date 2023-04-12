@@ -5,7 +5,7 @@ import { FaTimes } from "react-icons/fa";
 import { HiSearch } from "react-icons/hi";
 
 const MobileNav = ({ nav, navClose }) => {
-  const { toggle, handleClick, inputChange, onClick } =
+  const { toggle, inputChange, onClick } =
     useContext(ContainerContext);
   return (
     <nav className="mobile-nav">
@@ -64,22 +64,6 @@ const MobileNav = ({ nav, navClose }) => {
           </Link>
         </div>
       </div>
-
-      {/* <div className="input-group">
-        <input
-          type="text"
-          placeholder="Search for your favorite movies"
-          onChange={inputChange}
-        />
-        <HiSearch fontSize={21} color="black" id="search" />
-        <div id="Color-switcher" onClick={handleClick}>
-          <div className="toggle-handle">
-            <div
-              id={toggle ? "Color-switcher-mover" : "Color-switcher-moved"}
-            ></div>
-          </div>
-        </div>
-      </div> */}
     </nav>
   );
 };
