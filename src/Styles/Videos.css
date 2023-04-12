@@ -88,3 +88,9 @@ body{
 .LightThemeClose{
     color: #ff206e;
 }
+
+@media screen and (max-width: 768px) {
+#Exit1{
+    margin-left: 70vw;
+    margin-top: 0.2vh;
+}}

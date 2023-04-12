@@ -18,7 +18,7 @@ const TrailerMovies = (props) => {
     setTimeout(() => {
       handleSearch();
     }, 50);
-     // eslint-disable-next-line
+    // eslint-disable-next-line
   }, [videoURL]);
 
   return (
@@ -29,13 +29,8 @@ const TrailerMovies = (props) => {
           url={videoURL}
           className="reac-player"
           controls={true}
-          width={"60vw"}
-          height={"60vh"}
-          style={{
-            position: "fixed",
-            right: "18%",
-            top: 130,
-          }}
+          width={"100%"}
+          height={"100%"}
         />
       </div>
     </>
