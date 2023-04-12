@@ -35,6 +35,7 @@ const TvShows = () => {
     setTimeout(() => {
       TvShows();
     }, 50);
+    // eslint-disable-next-line
   }, [input]);
 
   const TvShowTitle = (show) => {
