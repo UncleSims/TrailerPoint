@@ -18,6 +18,7 @@ const TrailerTvShows = (props) => {
     setTimeout(() => {
       handleSearch();
     }, 50);
+     // eslint-disable-next-line
   }, [videoURL]);
 
   return (
