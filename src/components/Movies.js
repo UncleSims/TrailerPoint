@@ -53,7 +53,10 @@ const Movies = () => {
                 <div id={trailer ? "container" : "NoContainer"}>
                   <AiFillPlayCircle color="green" fontSize={40} id={trailer ? "playIcon" : "hide"} onClick={() => MoviesTitle(movie)}/>
                   <img src={movie.poster_path ? `${images}${movie.poster_path}` : NoImage} alt="NoImage"onClick={() => MoviesTitle(movie)} />
-                  <h3 id={movie.title.length > 28 ? "smaller-Text" : ""} className={toggle ? "mainColor" : "secondaryColor"}>{movie.title}</h3>
+                  <h3 
+                  // id={movie.title.length > 28 ? "smaller-Text" : ""} 
+                  id="text"
+                  className={toggle ? "mainColor" : "secondaryColor"}>{movie.title}</h3>
                 </div>
               </>)  
             })}

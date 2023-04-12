@@ -46,25 +46,28 @@ body{
 .movies-container img:hover{
     transform: scale(1.05);
 }
+
 #container{
     position: relative;
 }
 #hide{
     display: none;
 }
-#smaller-Text{
-    width: 60%;
-    font-size: 8px;
+#text{
+    width: 100%;
+    font-size: 16px;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 20px;
 }
 #playIcon{
     position: absolute;
     bottom: 70px;
     left: 20px;
     visibility: visible;
-    z-index: 100;
-    cursor: pointer;
+    z-index: 1;
+    cursor: pointer;  
 }
 #Exit1{
  
